@@ -43,3 +43,29 @@ npm run dev
 ```
 
 L'application sera accessible sur http://localhost:3000
+
+## Automatiser le lancement du serveur
+# Installer PM2 globalement
+npm install -g pm2
+
+# Créer le dossier logs
+mkdir -p /home/doud/Gestion.Projet/logs
+
+# Lancer l'application avec PM2
+cd /home/doud/Gestion.Projet
+pm2 start ecosystem.config.js
+
+# Sauvegarder la configuration PM2
+pm2 save
+
+# Configurer PM2 pour démarrer au boot
+pm2 startup systemd
+# Suivre les instructions affichées (copier/coller la commande sudo)
+
+# Commandes utiles PM2
+pm2 status        # Voir le statut
+pm2 logs          # Voir les logs
+pm2 restart all   # Redémarrer
+pm2 stop all      # Arrêter
+pm2 delete all    # Supprimer
+
