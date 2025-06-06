@@ -1,0 +1,159 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  PROJECT_MANAGER
+  TECHNICIAN
+  USER
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  REVIEW
+  DONE
+}
+
+enum ProjectStatus {
+  PLANNING
+  ACTIVE
+  ON_HOLD
+  COMPLETED
+  CANCELLED
+}
+
+model User {
+  id             String    @id @default(uuid())
+  email          String    @unique
+  password       String
+  firstName      String
+  lastName       String
+  role           Role      @default(USER)
+  isActive       Boolean   @default(true)
+  darkMode       Boolean   @default(false)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  
+  refreshTokens  RefreshToken[]
+  projects       ProjectUser[]
+  tasks          Task[]
+  notes          Note[]
+  activities     Activity[]
+}
+
+model RefreshToken {
+  id          String   @id @default(uuid())
+  token       String   @unique
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+}
+
+model Client {
+  id          String    @id @default(uuid())
+  name        String
+  email       String    @unique
+  phone       String?
+  address     String?
+  website     String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  projects    Project[]
+}
+
+model Project {
+  id            String         @id @default(uuid())
+  name          String
+  description   String?
+  clientId      String
+  client        Client         @relation(fields: [clientId], references: [id])
+  status        ProjectStatus  @default(PLANNING)
+  startDate     DateTime
+  endDate       DateTime
+  budget        Float?
+  progress      Float          @default(0)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  
+  users         ProjectUser[]
+  tasks         Task[]
+  notes         Note[]
+  activities    Activity[]
+}
+
+model ProjectUser {
+  id          String   @id @default(uuid())
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  role        String   @default("MEMBER")
+  joinedAt    DateTime @default(now())
+  
+  @@unique([projectId, userId])
+}
+
+model Task {
+  id          String   @id @default(uuid())
+  title       String
+  description String?
+  projectId   String
+  project     Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  assignedToId String?
+  assignedTo  User?    @relation(fields: [assignedToId], references: [id])
+  status      TaskStatus @default(TODO)
+  progress    Int      @default(0)
+  startDate   DateTime?
+  endDate     DateTime?
+  estimatedHours Float?  // Temps alloué en heures
+  actualHours Float?     // Temps réellement passé
+  dependencies TaskDependency[] @relation("DependentTask")
+  dependents   TaskDependency[] @relation("DependsOnTask")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TaskDependency {
+  id              String   @id @default(uuid())
+  dependentTaskId String
+  dependentTask   Task     @relation("DependentTask", fields: [dependentTaskId], references: [id], onDelete: Cascade)
+  dependsOnTaskId String
+  dependsOnTask   Task     @relation("DependsOnTask", fields: [dependsOnTaskId], references: [id], onDelete: Cascade)
+  createdAt       DateTime @default(now())
+  
+  @@unique([dependentTaskId, dependsOnTaskId])
+}
+
+model Note {
+  id          String   @id @default(uuid())
+  title       String
+  content     String
+  projectId   String?
+  project     Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  authorId    String
+  author      User     @relation(fields: [authorId], references: [id])
+  tags        String[] @default([])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Activity {
+  id          String   @id @default(uuid())
+  type        String
+  description String
+  projectId   String?
+  project     Project? @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  metadata    Json?
+  createdAt   DateTime @default(now())
+}

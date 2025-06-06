@@ -1,0 +1,60 @@
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T14:02:59.664Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:09:38.419Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:09:38.422Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:11:24.882Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:11:24.886Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:29:47.325Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:29:47.329Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:35:31.369Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:35:31.372Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:36:25.494Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:36:25.498Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:40:46.049Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:40:46.052Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:42:22.208Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:42:22.211Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:47:46.092Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:47:46.095Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:51:46.733Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T14:51:46.736Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:54:30.611Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-05T14:54:30.616Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T14:58:09.122Z"}
+{"level":"info","message":"Environment: development","timestamp":"2025-06-05T14:58:09.128Z"}
+{"level":"info","message":"Fetching all users...","timestamp":"2025-06-05T15:08:24.418Z"}
+{"level":"info","message":"Found 1 users","timestamp":"2025-06-05T15:08:24.490Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:11:42.573Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:11:42.576Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:11:42.577Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:16:10.831Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:16:10.835Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:16:10.835Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:19:08.087Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:19:08.090Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:19:08.091Z"}
+{"level":"info","message":"Fetching all users...","timestamp":"2025-06-05T15:19:15.706Z"}
+{"level":"info","message":"Found 1 users","timestamp":"2025-06-05T15:19:15.775Z"}
+{"level":"info","message":"Fetching all users...","timestamp":"2025-06-05T15:20:49.484Z"}
+{"level":"info","message":"Found 2 users","timestamp":"2025-06-05T15:20:49.486Z"}
+{"level":"info","message":"Fetching all users...","timestamp":"2025-06-05T15:21:15.684Z"}
+{"level":"info","message":"Found 2 users","timestamp":"2025-06-05T15:21:15.686Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:26:26.089Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:26:26.092Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:26:26.093Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:34:42.853Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:34:42.856Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:34:42.857Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:40:53.281Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:40:53.284Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:40:53.285Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T15:53:01.606Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T15:53:01.609Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T15:53:01.610Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T18:58:51.262Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T18:58:51.266Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T18:58:51.267Z"}
+{"level":"info","message":"Fetching all users...","timestamp":"2025-06-05T18:59:07.050Z"}
+{"level":"info","message":"Found 1 users","timestamp":"2025-06-05T18:59:07.118Z"}
+{"level":"info","message":"Server running on http://0.0.0.0:5000","timestamp":"2025-06-05T19:06:47.904Z"}
+{"level":"info","message":"Environment: production","timestamp":"2025-06-05T19:06:47.907Z"}
+{"level":"info","message":"Serving static files from: /home/doud/Gestion.Projet/client/dist","timestamp":"2025-06-05T19:06:47.907Z"}

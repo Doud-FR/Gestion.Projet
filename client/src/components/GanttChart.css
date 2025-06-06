@@ -1,0 +1,25 @@
+.gantt-container .gantt-task {
+  fill: #3b82f6;
+}
+
+.gantt-container .gantt-task-progress {
+  fill: #1d4ed8;
+}
+
+.dark .gantt-container .gantt-task {
+  fill: #60a5fa;
+}
+
+.dark .gantt-container .gantt-task-progress {
+  fill: #3b82f6;
+}
+
+.dark .gantt-container .gantt-header {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.dark .gantt-container .gantt-grid-row {
+  background-color: #111827;
+  border-color: #374151;
+}
